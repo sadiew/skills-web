@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Job App</title>
+  <link rel="stylesheet" href="./static/style.css">
+</head>
+<body>
+    <h1>UberMelon Job Application Form</h1>
+    <p>Thanks for your interest in our company. Please tell us a little bit about yourself below.</p>
+    <form action="/application" method="POST">
+        <label>First Name:
+            <input type="text" name="firstname">
+        </label><br>
+        <label >Last Name:
+            <input id="lastname" type="text" name="lastname">
+        </label><br>
+        <label>Salary:
+            <input type="text" name="salary">
+        </label><br>
+        <label>Select the position you are applying for:
+            <input type="radio" name="position" value="software-engineer">Software Engineer
+            <input type="radio" name="position" value="qa-engineer">QA Engineer
+            <input type="radio" name="position" value="product-manager">Product Manager
+        </label>
+        <input type="submit">
+    </form>
+</body>
+</html>
