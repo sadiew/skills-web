@@ -10,7 +10,7 @@ def index_page():
 def display_application():
 	return render_template('application-form.html')
 
-@app.route("/application")
+@app.route("/application", methods = ['POST'])
 def get_application_input():
 	firstname = request.form.get("firstname")
 	lastname = request.form.get("lastname")
