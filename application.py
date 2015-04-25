@@ -10,13 +10,12 @@ def index_page():
 def display_application():
 	return render_template('application-form.html')
 
-
 @app.route("/application")
 def get_application_input():
-	firstname = request.args.form("firstname")
-	lastname = request.args.form("lastname")
-	salary = request.args.form("salary")
-	position = request.args.form("position")
+	firstname = request.form.get("firstname")
+	lastname = request.form.get("lastname")
+	salary = request.form.get("salary")
+	position = request.form.get("position")
 
 	return render_template('application.html', firstname=firstname, lastname=lastname, salary=salary, position=position)
 
