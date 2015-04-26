@@ -521,7 +521,6 @@
 
 <script>
   var PRIME_COLORS = ['orange', 'midnightblue', 'darkgoldenrod', 'green', 'purple'];
-  var nextFivePrime = [];
 
   function isPrime(num) {
     if (num < 2) {
@@ -545,13 +544,12 @@
       
   }
 
-  function generatePrimes() {
-    var num = 11;
+  function generatePrimes(evt) {
+    var num = 12;
     var numOfPrimes = 0;
     while (numOfPrimes < 5) {
       if (isPrime(num)) {
-        $('#prime-box-area').append(
-                "<div class='prime-box' style='background-color: " +
+        $('#prime-box-area').append("<div class='prime-box' style='background-color: " + 
                 PRIME_COLORS[numOfPrimes] +
                 "'>" +
                 num +
